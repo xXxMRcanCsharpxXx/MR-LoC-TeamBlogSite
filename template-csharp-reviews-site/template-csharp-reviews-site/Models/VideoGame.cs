@@ -2,8 +2,8 @@
 {
     public class VideoGame
     {
-        public int Id;
-        public string Name;
+        public int Id { get; set; }
+        public string Name { get; set; }
 
         public string name;
         public string Studio;

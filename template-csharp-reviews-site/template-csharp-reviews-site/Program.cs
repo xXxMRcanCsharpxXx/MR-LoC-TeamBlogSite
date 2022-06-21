@@ -1,8 +1,12 @@
+using template_csharp_reviews_site;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
 // add db contexts here
+builder.Services.AddDbContext<VideoGameContext>();
 
 var app = builder.Build();
 
