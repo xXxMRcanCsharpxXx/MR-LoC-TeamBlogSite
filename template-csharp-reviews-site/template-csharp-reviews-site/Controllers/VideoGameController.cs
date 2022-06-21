@@ -13,7 +13,7 @@ namespace template_csharp_reviews_site.Controllers
 
         public IActionResult Index()
         {
-            return View(db);
+            return View(db.VideoGame.ToList());
         }
     }
 }
