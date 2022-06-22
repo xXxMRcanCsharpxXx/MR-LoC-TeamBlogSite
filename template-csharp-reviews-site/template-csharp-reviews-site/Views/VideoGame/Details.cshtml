@@ -1,0 +1,11 @@
+﻿@model VideoGame
+
+<h1>Video Game: @Model.Name</h1>
+<hr />
+<h2>People Who Played This Video Game: </h2>
+<ul>
+	@foreach (Review vgRev in Model.Reviews)
+	{
+		<li>@vgRev.User - @vgRev.VideoGame.Studio</li>
+	}
+</ul>

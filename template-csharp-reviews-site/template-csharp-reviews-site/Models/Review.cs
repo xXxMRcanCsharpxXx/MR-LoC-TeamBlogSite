@@ -3,11 +3,11 @@
     public class Review
     {
         public int Id { get; set; }
-        public string Name { get; set; }
-        VideoGame videoGame;
-        public string User;
-        public string Comment;
-        public int Rating;
+        public int VideoGameId { get; set; }
+        public virtual VideoGame VideoGame { get; set; }
+        public string User { get; set; }
+        public string Comment { get; set; }
+        public int Rating { get; set; }
 
     }
 }

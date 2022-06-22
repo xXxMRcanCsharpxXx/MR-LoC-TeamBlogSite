@@ -4,13 +4,11 @@
     {
         public int Id { get; set; }
         public string Name { get; set; }
-
-        public string name;
-        public string Studio;
+        public string Studio { get; set; }  
         //Platform Platform;
         //Rating Rating;
         //Genre Genre;
-        List<Review> Reviews;
+        public virtual List<Review> Reviews { get; set; }
 
         public VideoGame()
         {
