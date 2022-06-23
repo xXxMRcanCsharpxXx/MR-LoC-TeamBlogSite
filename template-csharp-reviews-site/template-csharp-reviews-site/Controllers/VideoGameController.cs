@@ -16,6 +16,27 @@ namespace template_csharp_reviews_site.Controllers
         {
             return View(db.VideoGame.ToList());
         }
+        
+        public IActionResult Create()
+        {
+            return View(new VideoGame());   
+        }
+        [HttpPost]
+        public IActionResult Create(VideoGame model)
+        {
+            List<VideoGame> videoGames = db.VideoGame.ToList();
+            for(int i = 0; i < videoGames.Count; i++)
+            {
+                if (videoGames[i].Name == model.Name)
+                {
+                    ViewBag.Warning = "That Video Game already exists!";
+                    return View(model);
+                }
+            }
+            db.VideoGame.Add(model);
+            db.SaveChanges();
+            return RedirectToAction("Index");   
+        }
 
         public IActionResult Details(int id)
         {
