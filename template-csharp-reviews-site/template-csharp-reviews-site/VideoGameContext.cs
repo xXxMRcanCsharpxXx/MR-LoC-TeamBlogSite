@@ -5,9 +5,9 @@ namespace template_csharp_reviews_site
 {
     public class VideoGameContext : DbContext
     {
-        public DbSet<VideoGame> VideoGame { get; set; }
+        public DbSet<VideoGame> VideoGames { get; set; }
 
-        public DbSet<Review> Review { get; set; } 
+        public DbSet<Review> Reviews { get; set; } 
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

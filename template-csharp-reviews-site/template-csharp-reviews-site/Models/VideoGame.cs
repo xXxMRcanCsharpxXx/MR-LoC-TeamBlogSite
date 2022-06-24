@@ -10,10 +10,10 @@
         //Genre Genre;
         public virtual List<Review> Reviews { get; set; }
 
-        public VideoGame()
-        {
+        //public VideoGame()
+        //{
 
-        }
+        //}
 
         //public Enum Platform {
         //Xbox,

@@ -14,7 +14,7 @@ namespace template_csharp_reviews_site.Controllers
 
         public IActionResult Index()
         {
-            return View(db.VideoGame.ToList());
+            return View(db.VideoGames.ToList());
         }
         
         public IActionResult Create()
@@ -24,7 +24,7 @@ namespace template_csharp_reviews_site.Controllers
         [HttpPost]
         public IActionResult Create(VideoGame model)
         {
-            List<VideoGame> videoGames = db.VideoGame.ToList();
+            List<VideoGame> videoGames = db.VideoGames.ToList();
             for(int i = 0; i < videoGames.Count; i++)
             {
                 if (videoGames[i].Name == model.Name)
@@ -33,14 +33,28 @@ namespace template_csharp_reviews_site.Controllers
                     return View(model);
                 }
             }
-            db.VideoGame.Add(model);
+            db.VideoGames.Add(model);
             db.SaveChanges();
             return RedirectToAction("Index");   
         }
 
         public IActionResult Details(int id)
         {
-            return View(db.VideoGame.ToList().Where(vg => vg.Id == id).FirstOrDefault());
+            return View(db.VideoGames.ToList().Where(vg => vg.Id == id).FirstOrDefault());
+        }
+
+        public IActionResult Delete(int id)
+        {
+            VideoGame videogame = db.VideoGames.Find(id);
+            return View(videogame);
+        }
+
+        [HttpPost]
+        public IActionResult Delete(VideoGame model)
+        {
+            db.VideoGames.Remove(model);
+            db.SaveChanges();
+            return RedirectToAction("Index");
         }
     }
 }
