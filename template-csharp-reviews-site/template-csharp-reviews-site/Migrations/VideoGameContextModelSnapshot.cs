@@ -47,7 +47,7 @@ namespace template_csharp_reviews_site.Migrations
 
                     b.HasIndex("VideoGameId");
 
-                    b.ToTable("Review");
+                    b.ToTable("Reviews");
 
                     b.HasData(
                         new
@@ -110,7 +110,7 @@ namespace template_csharp_reviews_site.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("VideoGame");
+                    b.ToTable("VideoGames");
 
                     b.HasData(
                         new

@@ -11,8 +11,8 @@ using template_csharp_reviews_site;
 namespace template_csharp_reviews_site.Migrations
 {
     [DbContext(typeof(VideoGameContext))]
-    [Migration("20220622181602_addedViews")]
-    partial class addedViews
+    [Migration("20220624173533_fridayFix")]
+    partial class fridayFix
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -49,7 +49,7 @@ namespace template_csharp_reviews_site.Migrations
 
                     b.HasIndex("VideoGameId");
 
-                    b.ToTable("Review");
+                    b.ToTable("Reviews");
 
                     b.HasData(
                         new
@@ -112,7 +112,7 @@ namespace template_csharp_reviews_site.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("VideoGame");
+                    b.ToTable("VideoGames");
 
                     b.HasData(
                         new
