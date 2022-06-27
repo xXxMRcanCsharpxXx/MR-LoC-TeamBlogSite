@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using template_csharp_reviews_site;
 
@@ -11,9 +12,10 @@ using template_csharp_reviews_site;
 namespace template_csharp_reviews_site.Migrations
 {
     [DbContext(typeof(VideoGameContext))]
-    partial class VideoGameContextModelSnapshot : ModelSnapshot
+    [Migration("20220627191233_newCreateMethodForReviewModel")]
+    partial class newCreateMethodForReviewModel
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
