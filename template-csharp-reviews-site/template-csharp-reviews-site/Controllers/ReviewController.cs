@@ -31,9 +31,14 @@ namespace template_csharp_reviews_site.Controllers
 
         public IActionResult Update(Review model)
         {
-                db.Reviews.Update(model);
-                db.SaveChanges();
-                return RedirectToAction("Index");
+            db.Reviews.Update(model);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        public IActionResult Details()
+        {
+            return View(db.Reviews.ToList().Where(r => r.Id == 0).FirstOrDefault());
         }
     }
 }
