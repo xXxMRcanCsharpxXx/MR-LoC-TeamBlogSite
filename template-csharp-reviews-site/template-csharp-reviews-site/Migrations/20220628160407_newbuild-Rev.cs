@@ -1,10 +1,11 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
 namespace template_csharp_reviews_site.Migrations
 {
-    public partial class fridayFix : Migration
+    public partial class newbuildRev : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -31,7 +32,9 @@ namespace template_csharp_reviews_site.Migrations
                     VideoGameId = table.Column<int>(type: "int", nullable: false),
                     User = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Comment = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Rating = table.Column<int>(type: "int", nullable: false)
+                    ReviewBody = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Rating = table.Column<int>(type: "int", nullable: false),
+                    PublishDate = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -53,19 +56,21 @@ namespace template_csharp_reviews_site.Migrations
                     { 2, "Bloodhunt", "Sharkmob" },
                     { 3, "Fortnite", "Epic Games" },
                     { 4, "Apex Legends", "Respawn" },
-                    { 5, "COD: Warzone", "Acti-Blizz" }
+                    { 5, "COD: Warzone", "Acti-Blizz" },
+                    { 6, "PUBG Moblie", "PUBG Studios/Krafton" }
                 });
 
             migrationBuilder.InsertData(
                 table: "Reviews",
-                columns: new[] { "Id", "Comment", "Rating", "User", "VideoGameId" },
+                columns: new[] { "Id", "Comment", "PublishDate", "Rating", "ReviewBody", "User", "VideoGameId" },
                 values: new object[,]
                 {
-                    { 1, "Fall guys is awesome", 8, "John Doe", 1 },
-                    { 2, "Bloodhunt is alright", 6, "Jane Doe", 2 },
-                    { 3, "Fortnite sucks", 3, "Jonnathan Doe", 3 },
-                    { 4, "Apex Legends is decent", 5, "John Deer", 4 },
-                    { 5, "Warzone is horrible", 1, "Jack Doe", 5 }
+                    { 1, "Fall guys is awesome", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 8, "Just a fun game to mess with my friends. I loved just knocking them off the levels, every time I got the chance.. 'Bang' .", "John Doe", 1 },
+                    { 2, "Bloodhunt is alright", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 6, "Good idea with what they were going for. Love the gameplay and a new style to these types of game.", "Jane Doe", 2 },
+                    { 3, "Fortnite sucks", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 3, "I would do lower but it was good to pump shotgun some noobs.", "Jonnathan Doe", 3 },
+                    { 4, "Apex Legends is decent", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 5, "work the playtime, but too many lootboxes and pay-to-win mechanics.", "John Deer", 4 },
+                    { 5, "Warzone is horrible", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 1, "Warzone was a cashgrab that stole my money.", "Jack Doe", 5 },
+                    { 6, "PUBG Moblie is decent", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 9, "PUBG Moblie is decent for this year's showcase", "Jackline O'Connor", 6 }
                 });
 
             migrationBuilder.CreateIndex(

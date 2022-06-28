@@ -7,6 +7,7 @@
         public virtual VideoGame VideoGame { get; set; }
         public string User { get; set; }
         public string Comment { get; set; }
+        public string ReviewBody { get; set; }
         public int Rating { get; set; }
         public DateTime PublishDate { get; set; }
 

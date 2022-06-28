@@ -4,7 +4,7 @@
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public string Studio { get; set; }  
+        public string Studio { get; set; }
         //Platform Platform;
         //Rating Rating;
         //Genre Genre;
