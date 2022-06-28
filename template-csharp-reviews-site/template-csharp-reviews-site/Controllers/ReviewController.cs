@@ -37,7 +37,7 @@ namespace template_csharp_reviews_site.Controllers
         public IActionResult Update(int id)
         {
             Review review = db.Reviews.Find(id);
-            if(review == null)
+            if (review == null)
             {
                 return View("Error");
             }
@@ -56,6 +56,19 @@ namespace template_csharp_reviews_site.Controllers
         public IActionResult Details(int id)
         {
             return View(db.Reviews.ToList().Where(r => r.Id == id).FirstOrDefault());
+        }
+        public IActionResult Delete(int id)
+        {
+            Review review = db.Reviews.Find(id);
+            return View(review);
+        }
+
+        [HttpPost]
+        public IActionResult Delete(Review model)
+        {
+            db.Reviews.Remove(model);
+            db.SaveChanges();
+            return RedirectToAction("Index");
         }
     }
 }

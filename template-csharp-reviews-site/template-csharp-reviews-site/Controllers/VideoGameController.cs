@@ -56,5 +56,23 @@ namespace template_csharp_reviews_site.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+        public IActionResult Update(int id)
+        {
+            VideoGame videoGame = db.VideoGames.Find(id);
+            if (videoGame == null)
+            {
+                return View("Error");
+            }
+            return View(videoGame);
+        }
+
+        [HttpPost]
+
+        public IActionResult Update(VideoGame model)
+        {
+            db.VideoGames.Update(model);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }

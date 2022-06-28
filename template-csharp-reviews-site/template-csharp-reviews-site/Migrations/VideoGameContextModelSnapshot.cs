@@ -64,7 +64,7 @@ namespace template_csharp_reviews_site.Migrations
                             Comment = "Fall guys is awesome",
                             PublishDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Rating = 8,
-                            ReviewBody = "Just a fun game to mess with my friends. I loved just knocking them off the levels, every time I got the chance.. 'Bang' .",
+                            ReviewBody = "Just a fun game to mess with my friends. I loved just knocking them off the levels, every time I got the chance... \"Bang\".",
                             User = "John Doe",
                             VideoGameId = 1
                         },

@@ -29,7 +29,7 @@ namespace template_csharp_reviews_site
             );
 
             modelBuilder.Entity<Review>().HasData(
-                new Review() { Id = 1, User = "John Doe", Comment = "Fall guys is awesome",ReviewBody = "Just a fun game to mess with my friends. I loved just knocking them off the levels, every time I got the chance.. 'Bang' .", Rating = 8, VideoGameId = 1 },
+                new Review() { Id = 1, User = "John Doe", Comment = "Fall guys is awesome", ReviewBody = "Just a fun game to mess with my friends. I loved just knocking them off the levels, every time I got the chance... \"Bang\"." , Rating = 8, VideoGameId = 1 },
                 new Review() { Id = 2, User = "Jane Doe", Comment = "Bloodhunt is alright", ReviewBody = "Good idea with what they were going for. Love the gameplay and a new style to these types of game.", Rating = 6, VideoGameId = 2 },
                 new Review() { Id = 3, User = "Jonnathan Doe", Comment = "Fortnite sucks", ReviewBody = "I would do lower but it was good to pump shotgun some noobs.", Rating = 3, VideoGameId = 3 },
                 new Review() { Id = 4, User = "John Deer", Comment = "Apex Legends is decent", ReviewBody = "work the playtime, but too many lootboxes and pay-to-win mechanics.", Rating = 5, VideoGameId = 4 },

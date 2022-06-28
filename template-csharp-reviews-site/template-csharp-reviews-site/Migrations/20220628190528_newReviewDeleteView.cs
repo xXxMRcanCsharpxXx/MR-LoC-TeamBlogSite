@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace template_csharp_reviews_site.Migrations
 {
-    public partial class newbuildRev : Migration
+    public partial class newReviewDeleteView : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -65,7 +65,7 @@ namespace template_csharp_reviews_site.Migrations
                 columns: new[] { "Id", "Comment", "PublishDate", "Rating", "ReviewBody", "User", "VideoGameId" },
                 values: new object[,]
                 {
-                    { 1, "Fall guys is awesome", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 8, "Just a fun game to mess with my friends. I loved just knocking them off the levels, every time I got the chance.. 'Bang' .", "John Doe", 1 },
+                    { 1, "Fall guys is awesome", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 8, "Just a fun game to mess with my friends. I loved just knocking them off the levels, every time I got the chance... \"Bang\".", "John Doe", 1 },
                     { 2, "Bloodhunt is alright", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 6, "Good idea with what they were going for. Love the gameplay and a new style to these types of game.", "Jane Doe", 2 },
                     { 3, "Fortnite sucks", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 3, "I would do lower but it was good to pump shotgun some noobs.", "Jonnathan Doe", 3 },
                     { 4, "Apex Legends is decent", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 5, "work the playtime, but too many lootboxes and pay-to-win mechanics.", "John Deer", 4 },
