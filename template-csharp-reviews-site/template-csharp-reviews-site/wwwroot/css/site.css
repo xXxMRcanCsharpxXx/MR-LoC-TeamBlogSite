@@ -12,11 +12,51 @@ html {
   position: relative;
   min-height: 100%;
 }
-
+nav{
+    background-color: lightblue;
+}
 body {
   margin-bottom: 60px;
+  background-color: whitesmoke;
 }
-
+thead {
+    background-color: black;
+    color: white;
+}
+tr:nth-child(even) {
+    background-color: lightgray;
+}
 #stamplogo {
     max-height: 3rem;
+}
+tbody {
+    background-color: darkgray;
+    border-color: black;
+    border-top-style: solid;
+    border-bottom-style: solid;
+}
+ th, tr{
+    border: 1px solid;
+}
+th {
+    color: lightblue;
+    border-color: black;
+    border-top-style: solid;
+    border-bottom-style: solid;
+}
+td{
+    color: darkslategray;
+}
+a:hover {
+    background-color: grey;
+    border-radius: 25px;
+    transition: .5s;
+    transform: scale(1.07);
+}
+a {
+    border-radius: 25px;
+}
+#logolinkstamp {
+    border-radius: 0px;
+    padding: 5px;
 }
