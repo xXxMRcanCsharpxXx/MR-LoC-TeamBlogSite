@@ -24,7 +24,7 @@
     <h1>Reviews</h1>
     @foreach(Review rev in Model.Reviews)
     {
-        <h4>Username: @rev.User - Rating: @rev.Rating</h4>
+        <h4>Author: @rev.User - Rating: @rev.Rating</h4>
         <p>@rev.ReviewBody</p>
     }
 </div>
